@@ -1,5 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import AddProductForm from "../components/product/AddProductForm";
 function AddProduct() {
+    const navigate = useNavigate();
+
     function addProductHandler(newProduct) {
         fetch("http://localhost:3004/product", {
             method:"POST",
@@ -8,8 +11,7 @@ function AddProduct() {
                 'Content-Type': 'application/json'
             }
         })
-        .then(response=>response.json())
-        .then(data=> console.log(data))
+        .then(response=>navigate("/",{replace:true}))
         .catch(err=>console.log(err));
 
     }
