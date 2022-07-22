@@ -1,5 +1,5 @@
 {
     "env":{
-        "connectionString":"Connection String"
+        "connectionString":"mongodb+srv://demo:BqF5KfPdO8kgcvb7@myclass.fczoc.mongodb.net/testdb?retryWrites=true&w=majority"
     }
 }
